@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: 10px;
     padding: 0;
   }
   
@@ -49,11 +49,12 @@ body {
   }
   
   .weather-card {
-    border: 1px solid #ccc;
-    background-color: #007bff
+    border: 1px solid #007bff;
+    background-color: #007bff;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
-    margin-right: 10px; /* Add margin between cards */
-    flex: 0 0 auto; /* Let cards grow and shrink */
+    margin-right: 10px;
+    margin-left: 10px; 
+    flex: 0 0 auto; 
   }

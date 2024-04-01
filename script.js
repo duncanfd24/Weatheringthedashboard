@@ -1,3 +1,4 @@
+//API key for accessing OpenweatherMap API.
 const apiKey = '26c75a706b8456d7356e8d0192ee9a86';
 const baseURL = 'https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={APIkey}&units=imperial';
 const forecastURL = 'https://api.openweathermap.org/data/2.5/forecast?q={cityname}&appid={APIkey}&units=imperial'
@@ -10,6 +11,7 @@ function searchWeather() {
   const url = baseURL.replace('{cityname}', city).replace('{APIkey}', apiKey);
   const forecastdata = forecastURL.replace('{cityname}', city).replace('{APIkey}', apiKey);
 
+  //Gather current weather information.
   fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -18,7 +20,7 @@ function searchWeather() {
       addToHistory(city);
     })
     .catch(error => console.error('Error fetching weather:', error));
-
+    //Gather future forecast information.
     fetch(forecastdata)
     .then(response => response.json())
     .then(data => {
@@ -57,7 +59,7 @@ function displayWeather(data) {
     </div>
   `;
 }
-
+//Function to display five day forecast.
 function forecastCall(data){
 
   const fiveDayForecastDisplay = document.getElementById('fiveDayForecast');
@@ -102,7 +104,12 @@ function updateHistoryDisplay() {
     const historyItem = document.createElement('div');
     historyItem.textContent = city;
     historyItem.classList.add('search-history-item');
-    historyItem.onclick = () => searchWeather(city);
+    historyItem.addEventListener('click', () => {
+      document.getElementById('cityInput').value = city; // Update input field with selected city
+      searchWeather(); // Trigger search for the selected city
+    });
     historyDisplay.appendChild(historyItem);
+    
   });
-}
+ 
+};
