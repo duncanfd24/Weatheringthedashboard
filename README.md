@@ -18,3 +18,5 @@ This Weather Dashboard is a web application that allows users to search for curr
 ## License
 
 MIT License was utilized for this application.
+
+![image](https://github.com/duncanfd24/Weatheringthedashboard/assets/159070352/25b3980e-e3c1-4fa8-9ce5-545737aa74e2)
