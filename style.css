@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .header-text {
+    font-size: 24px; 
+  }
+  
+  .search-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-container label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .search-container input[type="text"] {
+    flex: 0;
+    padding: 5px;
+  }
+ 
+  main {
+    padding-top: 200px; 
+  }
+  .search-container button {
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .weather-details {
+    display: block;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  
+  .weather-card {
+    border: 1px solid #ccc;
+    background-color: #007bff
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px; /* Add margin between cards */
+    flex: 0 0 auto; /* Let cards grow and shrink */
+  }
